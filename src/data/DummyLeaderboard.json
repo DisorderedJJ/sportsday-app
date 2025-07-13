@@ -1,0 +1,19 @@
+{
+    "lastUpdatedDate": "2025/05/20",
+    "marksListBySport": [
+        {
+            "sportName": "Cricket",
+            "houseMarks": [
+                {
+                    "houseName": "Earth Kingdom",
+                    "marksList": [
+                        {
+                            "commencedDate": "2025/05/18",
+                            "marks": "85"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
