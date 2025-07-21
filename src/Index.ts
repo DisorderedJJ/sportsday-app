@@ -9,6 +9,7 @@ import cookieParser from "cookie-parser";
 import { Response, Request, NextFunction } from "express";
 import authRoute from "./routes/AuthRoute";
 import leaderboardRoute from "./routes/LeaderBoardRoute";
+import healthCheckRouter from "./routes/HealthCheckRoute";
 
 const app: Express = express();
 const server: http.Server = http.createServer(app);
@@ -29,12 +30,7 @@ app.use(
   })
 );
 
-// swagger openapi doc route
-const swaggerDocument = YAML.load("src/apiDocs/openapi.yaml");
-app.use("/api", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
-// Buisness logic routes
-// app.use("/healthcheck", healthCheckRouter);
+app.use("/healthcheck", healthCheckRouter);
 app.use("/sportsapp/auth", authRoute);
 app.use("/sportsapp/loaderboard", leaderboardRoute);
 /* Global middlewares

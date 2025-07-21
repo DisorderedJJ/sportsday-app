@@ -1,4 +1,3 @@
-import LoggerConfig from "../../config/LoggerConfig";
 import ELCIELTSInternalError from "../../exception/SportsDayAppInternalError";
 
 function Handle(target: any, methodName: string, descriptor: PropertyDescriptor) {
@@ -7,7 +6,7 @@ function Handle(target: any, methodName: string, descriptor: PropertyDescriptor)
     try {
       return await originalMethod.call(this, ...args);
     } catch (err) {
-      LoggerConfig.getLogger().error(`Error occured in method name: ${methodName}`, err);
+      console.log(`Error occured in method name: ${methodName}`, err);
       if (err instanceof ELCIELTSInternalError) {
         throw err;
       } else {
