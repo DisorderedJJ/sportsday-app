@@ -5,6 +5,7 @@ const configs = {
   env: process.env.NODE_ENV || "dev",
   corsAllowedOrigin: process.env.CORS_ALLOWED_ORIGIN,
   serverUrl: process.env.SERVER_URL,
+  userDataFetchCacheTime: process.env.USER_DATA_FETCH_CACHE_TIME,
 };
 
 export default configs;

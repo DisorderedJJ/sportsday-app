@@ -8,7 +8,7 @@ import NodeCache from "node-cache";
 
 class SigninService implements ISigninService {
   private static instance: ISigninService = new SigninService();
-  private cache: NodeCache = new NodeCache({ stdTTL: 60 * 60 });
+  private cache: NodeCache = new NodeCache({ stdTTL: parseInt(configs.userDataFetchCacheTime || "3600") });
 
   private constructor() {}
 
