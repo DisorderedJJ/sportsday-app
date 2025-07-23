@@ -32,7 +32,7 @@ class SigninService implements ISigninService {
       keys: ["userName"],
       threshold: 0.4,
     });
-    const results = fuse.search(term);
+    const results = fuse.search(term).slice(0, parseInt(configs.maxSearchResultsCutoff || "10"));
     return results.map((result) => result.item);
   }
 }

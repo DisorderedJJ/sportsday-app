@@ -6,6 +6,7 @@ const configs = {
   corsAllowedOrigin: process.env.CORS_ALLOWED_ORIGIN,
   serverUrl: process.env.SERVER_URL,
   userDataFetchCacheTime: process.env.USER_DATA_FETCH_CACHE_TIME,
+  maxSearchResultsCutoff: process.env.MAX_SEARCH_RESULT_CUTOFF,
 };
 
 export default configs;
